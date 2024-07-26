@@ -10,13 +10,13 @@ static const char *colorname[NUMCOLS] = {
 };
 
 /* treat a cleared input like a wrong password (color) */
-static const int failonclear = 0;
+static const int failonclear = 1;
 
-/* time in seconds before the monitor shuts down */
-static const int monitortime = 4;
+/*Enable blur*/
+#define BLUR
 
-/* insert grid pattern with scale 1:1, the size can be changed with logosize */
-static const int logosize = 77;
-static const int logow =
-    12; /* grid width and height for right center alignment*/
-static const int logoh = 6;
+/*Set Blur radius*/
+static const int blurRadius = 20;
+
+/*Set pixelation radius*/
+static const int pixelSize = 20;
