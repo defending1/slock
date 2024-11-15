@@ -1,18 +1,20 @@
 /* user and group to drop privileges to */
-static const char *user = "nobody";
-static const char *group = "nobody";
+static const char *user = "alberto";
+static const char *group = "wheel";
 
 /* Gruvbox low-contrast */
 static const char *colorname[NUMCOLS] = {
-    [BACKGROUND] = "white",
-    [INIT] = "2d2d2d",    /* after initialization */
-    [INPUT] = "#005577",  /* during input */
-    [FAILED] = "#CC3333", /* wrong password */
-
+    [BACKGROUND] = "white", [INIT] = "2d2d2d", /* after initialization */
+    [INPUT] = "#005577",                       /* during input */
+    [FAILED] = "#CC3333",                      /* wrong password */
+    [PAM] = "#9400D3",                         /* waiting for PAM */
 };
 
 /* treat a cleared input like a wrong password (color) */
 static const int failonclear = 1;
+
+/* PAM service that's used for authentication */
+static const char *pam_service = "login";
 
 /* number of failed password attempts until failcommand is executed.
    Set to 0 to disable */

@@ -21,7 +21,7 @@ FREETYPEINC = /usr/include/freetype2
 
 # includes and libs
 INCS = -I. -I/usr/include -I${X11INC} -I${FREETYPEINC}
-LIBS = -L/usr/lib -lc -lcrypt -L${X11LIB} -lX11 -lImlib2 ${XINERAMALIBS} ${FREETYPELIBS} -lXext -lXrandr
+LIBS = -L/usr/lib -lc -lcrypt -L${X11LIB} -lX11 -lImlib2 ${XINERAMALIBS} ${FREETYPELIBS} -lXext -lXrandr -lpam
  
 
 # flags
