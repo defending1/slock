@@ -14,7 +14,14 @@ static const char *colorname[NUMCOLS] = {
 /* treat a cleared input like a wrong password (color) */
 static const int failonclear = 1;
 
-static const int logosize = 75;
+/* number of failed password attempts until failcommand is executed.
+   Set to 0 to disable */
+static const int failcount = 5;
+
+/* command to be executed after [failcount] failed password attempts */
+static const char *failcommand = "shutdown";
+
+static const int logosize = 45;
 static const int logow =
     12; /* Grid width and height for right center alignment*/
 static const int logoh = 6;
@@ -27,8 +34,8 @@ static XRectangle rectangles[9] = {
 /*Enable blur*/
 #define BLUR
 /*Set blur radius*/
-static const int blurRadius = 20;
+static const int blurRadius = 30;
 /*Enable Pixelation*/
 // #define PIXELATION
 /*Set pixelation radius*/
-static const int pixelSize = 20;
+static const int pixelSize = 30;
